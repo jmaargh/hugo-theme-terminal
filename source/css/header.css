@@ -79,8 +79,8 @@
       }
 
       li {
-        border-left: 1px var(--color-menu);
-        margin-left: 3px;
+        border-left: solid 1px var(--color-menu);
+        padding-left: 3px;
         margin-top: 3px;
         margin-bottom: 3px;
 
