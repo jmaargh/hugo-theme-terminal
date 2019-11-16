@@ -1,6 +1,7 @@
 baseurl = "https://example.com/"
 languageCode = "en-us"
 theme = "hugo-theme-terminal"
+themesDir = "../../"
 paginate = 5
 
 [params]
