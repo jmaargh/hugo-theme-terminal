@@ -15,7 +15,7 @@ code.language-scss,
 .token.regex,
 .token.atrule,
 .token.number {
-  color: var(--accent);
+  color: var(--color-accent);
 }
 
 .token.tag-id,
@@ -25,14 +25,14 @@ code.language-scss,
 .token.placeholder,
 .token.variable,
 .token.attr-name {
-  color: color-mod(var(--accent) a(70%));
+  color: color-mod(var(--color-accent) a(70%));
 }
 
 .token.property,
 .token.function,
 code.language-javascript,
 code.language-html {
-  color: color-mod(var(--accent) blend(#999 90%));
+  color: color-mod(var(--color-accent) blend(#999 90%));
 }
 
 .token.selector,

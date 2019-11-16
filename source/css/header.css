@@ -1,8 +1,8 @@
 @define-mixin menu {
   position: absolute;
-  background: var(--background);
-  box-shadow: var(--shadow);
-  color: white;
+  background: var(--color-background);
+  box-shadow: var(--color-shadow);
+  color: var(--color-menu);
   border: 2px solid;
   margin: 0;
   padding: 10px;
@@ -27,7 +27,12 @@
 
     &:after {
       content: '';
-      background: repeating-linear-gradient(90deg, var(--accent), var(--accent) 2px, transparent 0, transparent 10px);
+      background: repeating-linear-gradient(
+        90deg, var(--color-accent), var(--color-accent-secondary) 100%
+      );
+      mask: repeating-linear-gradient(
+        105deg, transparent, white 1px, white 2px, transparent 3px, transparent 10px
+      );
       display: block;
       width: 100%;
       right: 10px;
@@ -41,9 +46,10 @@
   }
 
   .menu {
-    --shadow-color: color-mod(var(--background) a(80%));
+    --shadow-color: color-mod(var(--color-background) a(80%));
     --shadow: 0 10px var(--shadow-color), -10px 10px var(--shadow-color), 10px 10px var(--shadow-color);
-    margin: 20px 0;
+    color: var(--color-menu);
+    margin: 12px 0;
 
     @media (--phone) {
       @mixin menu;
@@ -73,10 +79,18 @@
       }
 
       li {
+        border-left: 1px var(--color-menu);
+        margin-left: 3px;
+        margin-top: 3px;
+        margin-bottom: 3px;
+
         &:not(:last-of-type) {
-          margin-right: 20px;
-          margin-bottom: 10px;
+          margin-right: 12px;
           flex: 0 0 auto;
+        }
+
+        a {
+          text-decoration: none;
         }
       }
 
@@ -108,7 +122,7 @@
         left: 0;
 
         &-trigger {
-          color: var(--accent);
+          color: var(--color-accent);
           user-select: none;
           cursor: pointer;
         }
@@ -134,7 +148,7 @@
         list-style-type: none;
         display: flex;
         flex-direction: row;
-        color: var(--accent);
+        color: var(--color-accent);
         cursor: pointer;
         margin: 0;
       }
@@ -147,7 +161,7 @@
     }
 
     &-trigger {
-      color: var(--accent);
+      color: var(--color-accent);
       border: 2px solid;
       margin-left: 10px;
       height: 100%;

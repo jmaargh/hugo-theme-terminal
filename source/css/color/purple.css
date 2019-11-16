@@ -7,8 +7,15 @@
 @import '../variables.css';
 
 :root {
-  --accent: #23B0FF;
-  --background: color-mod(var(--accent) blend(#1D1E28 98%));
-  --color: white;
-  --border-color: rgba(255, 255, 255, .1);
+  --color-background: #16121C;
+  --color-accent-dark: #4B4E6D;
+  --color-accent-light: #C9F0FF;
+  --color-accent-secondary: #3C6E71;
+  --color-main: #f7fcfc;
+
+  --color-accent: var(--color-accent-dark);
+  --color-footer: var(--color-accent-secondary);
+  --color-logo-text: var(--color-background);
+  --color-menu: var(--color-accent-light);
+  --color-border: var(--color-accent-secondary);
 }
